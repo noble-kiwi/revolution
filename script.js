@@ -258,27 +258,7 @@ function createControls(media, containerId) {
     container.appendChild(btn);
   });
   
-  const timeDisplay = document.createElement('div');
-  timeDisplay.className = 'time-display';
-  timeDisplay.style.cssText = `
-    font-size: 14px;
-    color: var(--text-color);
-  `;
-  
-  media.addEventListener('timeupdate', () => {
-    const current = formatTime(media.currentTime);
-    const duration = formatTime(media.duration || 0);
-    timeDisplay.textContent = `${current} / ${duration}`;
-  });
-  
-  container.appendChild(timeDisplay);
   media.parentNode.insertBefore(container, media.nextSibling);
-}
-
-function formatTime(seconds) {
-  const min = Math.floor(seconds / 60);
-  const sec = Math.floor(seconds % 60);
-  return `${min}:${sec.toString().padStart(2, '0')}`;
 }
 
 function initAll() {
