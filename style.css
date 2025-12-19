@@ -16,7 +16,7 @@ body{
   background-color: var(--bg-color);
   color: var(--text-color);
   transition: background-color .4s ease;
-  overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+  overflow-x: hidden;
 }
 
 a{
@@ -86,14 +86,14 @@ a{
   align-items: center;
   max-width: 1400px;
   margin: auto;
-  padding: 0 15px; /* Добавляем отступы по бокам */
-  box-sizing: border-box; /* Учитываем padding в ширине */
+  padding: 0 15px; 
+  box-sizing: border-box; 
   width: 100%;
 }
 
 .page img{
   width: 50%;
-  max-width: 100%; /* Ограничиваем максимальную ширину */
+  max-width: 100%;
   height: auto;
 }
 
@@ -450,7 +450,7 @@ display: flex;
 gap: 10px;
 align-items: center;
 margin-top: 10px;
-flex-wrap: wrap; /* Перенос кнопок на маленьких экранах */
+flex-wrap: wrap; 
 }
 
 .media-btn {
@@ -464,7 +464,7 @@ font-size: 16px;
 }
 
 .time-display {
-display: none; /* Убираем отображение времени */
+display: none; 
 }
 
 @media (max-width:1024px) {
@@ -515,23 +515,23 @@ display: none; /* Убираем отображение времени */
     }
 
     video{
-      width: 90%; /* Фото и видео 90% на мобильных */
+      width: 90%;
     }
 
     .page img {
-      width: 90%; /* Фото и видео 90% на мобильных */
+      width: 90%; 
     }
 
     .media img {
-      width: 90%; /* Фото в секции media 90% на мобильных */
+      width: 90%; 
     }
 
     .container_banner img {
-      width: 90%; /* Фото в баннерах 90% на мобильных */
+      width: 90%; 
     }
 
     .heading img {
-      width: 90%; /* Фото в заголовке 90% на мобильных */
+      width: 90%;
     }
 
     .nav{
@@ -566,7 +566,7 @@ display: none; /* Убираем отображение времени */
 
 @media(max-width:580px){
   .heading img {
-    width: 90%; /* Фото в заголовке 90% на мобильных */
+    width: 90%; 
   }
 
   .banner1{
@@ -582,7 +582,7 @@ display: none; /* Убираем отображение времени */
   }
 
   .container_banner img{
-    max-width: 90%; /* Фото в баннерах 90% на мобильных */
+    max-width: 90%; 
     max-height: 184px;
     padding-top: 20px;
   }
@@ -628,7 +628,6 @@ display: none; /* Убираем отображение времени */
     margin-right: 5px;
   }
 
-  /* Фото и видео 90% на мобильных */
   video {
     width: 90%;
   }
@@ -659,7 +658,6 @@ display: none; /* Убираем отображение времени */
     height: 80px;
   }
 
-  /* Фото и видео 90% на мобильных */
   video {
     width: 90%;
   }
@@ -679,7 +677,7 @@ display: none; /* Убираем отображение времени */
 
 @media (max-width: 430px){
   .heading img {
-    width: 90%; /* Фото в заголовке 90% на мобильных */
+    width: 90%; 
   }
 
   .media-controls{
@@ -695,7 +693,6 @@ display: none; /* Убираем отображение времени */
     max-width: 90%;
   }
 
-  /* Фото и видео 90% на мобильных */
   video {
     width: 90%;
   }
@@ -712,3 +709,4 @@ display: none; /* Убираем отображение времени */
     width: 90%;
   }
 }
+
