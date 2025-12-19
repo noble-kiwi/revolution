@@ -1,4 +1,3 @@
-//тема
 function updateBannerContainerId(theme) {
   const darkContainerBanner = document.getElementById('darkContainerBanner');
   const lightContainerBanner = document.getElementById('lightContainerBanner');
@@ -41,7 +40,6 @@ function toggleTheme() {
   localStorage.setItem('theme', newTheme);
 }
 
-//меню
 function initMobileMenu() {
   const button = document.getElementById('button');
   const nav = document.getElementById('nav');
@@ -72,7 +70,6 @@ function initMenuCloseOnClickOutside() {
   });
 }
 
-//форма
 function validateForm() {
   let isValid = true;
   
@@ -214,7 +211,6 @@ function initFeedbackForm() {
   }
 }
 
-//медиа
 function initMedia() {
   const videos = document.querySelectorAll('video');
   const audios = document.querySelectorAll('audio');
