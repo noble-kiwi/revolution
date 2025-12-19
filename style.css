@@ -30,6 +30,14 @@ a{
   border: 0;
 }
 
+#themeToggle svg {
+  fill: #ffffff;
+}
+
+.button svg {
+  fill: #ffffff;
+}
+
 .lightThems{
   color: #000000;
 }
@@ -47,6 +55,14 @@ a{
 } 
 
 .lightThems a{
+  color: #ffffff;
+}
+
+.lightThems footer p {
+  color: #ffffff;
+}
+
+.lightThems footer a {
   color: #ffffff;
 }
 
@@ -71,8 +87,23 @@ a{
   color:#121212BB;
 } 
 
-
 .darkThems a{
+  color: #121212;
+}
+
+.darkThems #themeToggle svg {
+  fill: #121212;
+}
+
+.darkThems .button svg {
+  fill: #121212;
+}
+
+.darkThems footer p {
+  color: #121212;
+}
+
+.darkThems footer a {
   color: #121212;
 }
 
@@ -86,8 +117,8 @@ a{
   align-items: center;
   max-width: 1400px;
   margin: auto;
-  padding: 0 15px; 
-  box-sizing: border-box; 
+  padding: 0 15px;
+  box-sizing: border-box;
   width: 100%;
 }
 
@@ -140,6 +171,7 @@ header nav ul{
     justify-content: space-evenly;
     align-items: center;
     flex-direction: row;
+    gap: 30px;
 }
 
 header nav ul li{
@@ -178,6 +210,11 @@ header nav ul li a{
 .banner_text{
     font-weight: 400;
     font-size: 20px;
+    text-align: justify;
+}
+
+.banner_text p {
+    text-align: justify;
 }
 
 .heading{
@@ -185,6 +222,7 @@ header nav ul li a{
     flex-direction: column;
     align-items: center;
     width: 100%;
+    text-align: center;
 }
 
 .heading img {
@@ -210,6 +248,7 @@ header nav ul li a{
 .container_banner h2{
   font-weight: 500;
   font-size: 24px;
+  text-align: center;
 }
 
 .container_banner a{
@@ -261,6 +300,7 @@ footer{
     margin-top: 40px;
     background-color: #3589FF;
     width: 100%;
+    text-align: center;
 }
 
 footer img {
@@ -288,6 +328,7 @@ video{
 
 .media p{
   max-width: 96%;
+  text-align: justify;
 }
 
 table{
@@ -306,6 +347,7 @@ th{
   border: 3px solid #3589FF;
   padding: 10px;
   border-radius: 30px;
+  text-align: center;
 }
 
 td{
@@ -313,8 +355,8 @@ td{
   border: 3px solid #3589FF;
   padding: 10px;
   border-radius: 30px;
+  text-align: justify;
 }
-
 
 .lightThems fieldset{
   width: 90%;
@@ -336,7 +378,6 @@ td{
   box-sizing: border-box;
 }
 
-
 .feedbackForm {
   max-width: 600px;
   margin: 30px auto;
@@ -354,6 +395,7 @@ td{
   font-size: 1.2em;
   font-weight: bold;
   padding: 0 10px;
+  text-align: center;
 }
 
 .feedbackForm label {
@@ -435,6 +477,7 @@ border-left: 4px solid #ff3333;
 padding: 10px;
 margin-bottom: 15px;
 border-radius: 0 4px 4px 0;
+text-align: justify;
 }
 
 .success-message {
@@ -443,6 +486,7 @@ border-left: 4px solid #33cc33;
 padding: 15px;
 margin-bottom: 15px;
 border-radius: 0 4px 4px 0;
+text-align: justify;
 }
 
 .media-controls {
@@ -450,7 +494,8 @@ display: flex;
 gap: 10px;
 align-items: center;
 margin-top: 10px;
-flex-wrap: wrap; 
+flex-wrap: wrap;
+justify-content: center;
 }
 
 .media-btn {
@@ -464,7 +509,19 @@ font-size: 16px;
 }
 
 .time-display {
-display: none; 
+display: none;
+}
+
+p, td, .banner_text, .media p {
+  text-align: justify;
+  hyphens: auto;
+}
+
+h1, h2, h3, h4, h5, h6,
+.heading, .container_banner h2, 
+footer, .feedbackForm legend,
+.media-controls, .text {
+  text-align: center;
 }
 
 @media (max-width:1024px) {
@@ -519,15 +576,15 @@ display: none;
     }
 
     .page img {
-      width: 90%; 
+      width: 90%;
     }
 
     .media img {
-      width: 90%; 
+      width: 90%;
     }
 
     .container_banner img {
-      width: 90%; 
+      width: 90%;
     }
 
     .heading img {
@@ -550,12 +607,25 @@ display: none;
       box-shadow:0 2px 0 rgba(0,0,0,.15);
     }
     .nav.nav--open{display:flex}
+    
+    header nav ul {
+      flex-direction: column;
+      gap: 0;
+    }
+    
+    header nav ul li {
+      text-align: center;
+      padding: 10px 0;
+      width: 100%;
+    }
+    
     nav ul li a{
       display:block;
       margin:0;
       color:#cbb7ff;
       text-decoration:none;
       border-bottom:1px solid rgba(255,255,255,.12);
+      padding: 10px 20px;
     }
     .nav a:last-child{border-bottom:0}
     
@@ -566,7 +636,7 @@ display: none;
 
 @media(max-width:580px){
   .heading img {
-    width: 90%; 
+    width: 90%;
   }
 
   .banner1{
@@ -582,7 +652,7 @@ display: none;
   }
 
   .container_banner img{
-    max-width: 90%; 
+    max-width: 90%;
     max-height: 184px;
     padding-top: 20px;
   }
@@ -677,7 +747,7 @@ display: none;
 
 @media (max-width: 430px){
   .heading img {
-    width: 90%; 
+    width: 90%;
   }
 
   .media-controls{
@@ -709,4 +779,3 @@ display: none;
     width: 90%;
   }
 }
-
