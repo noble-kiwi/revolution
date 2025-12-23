@@ -411,6 +411,7 @@ td{
 }
 
 .feedbackForm input[type="text"],
+.feedbackForm input[type="tel"],
 .feedbackForm textarea {
   width: 100%;
   padding: 8px;
@@ -421,6 +422,7 @@ td{
 }
 
 .lightThems .feedbackForm input[type="text"],
+.lightThems .feedbackForm input[type="tel"],
 .lightThems .feedbackForm textarea {
   background-color: #fff;
   color: #000;
@@ -428,6 +430,7 @@ td{
 }
 
 .darkThems .feedbackForm input[type="text"],
+.darkThems .feedbackForm input[type="tel"],
 .darkThems .feedbackForm textarea {
   background-color: #2d3748;
   color: #fff;
@@ -528,6 +531,54 @@ h1, h2, h3, h4, h5, h6,
 footer, .feedbackForm legend,
 .media-controls, .text {
   text-align: center;
+}
+
+/* Стили для семантической разметки */
+article {
+  margin-bottom: 30px;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.lightThems article {
+  background-color: #f8fafc;
+  border: 1px solid #e2e8f0;
+}
+
+.darkThems article {
+  background-color: #1a202c;
+  border: 1px solid #2d3748;
+}
+
+section {
+  margin: 25px 0;
+}
+
+section h3 {
+  margin-bottom: 15px;
+  color: var(--text-color);
+}
+
+/* Специфичные стили для секций */
+.media section {
+  padding: 15px;
+  border-radius: 6px;
+  margin-bottom: 20px;
+}
+
+.lightThems .media section {
+  background-color: #f7fafc;
+  border-left: 4px solid #3589FF;
+}
+
+.darkThems .media section {
+  background-color: #2d3748;
+  border-left: 4px solid #1979ff;
+}
+
+/* Стили для форм с Cleave.js */
+.cleave-input {
+  font-family: 'Montserrat', sans-serif;
 }
 
 @media (max-width:1024px) {
@@ -644,6 +695,10 @@ footer, .feedbackForm legend,
       padding: 8px;
       word-break: break-word;
     }
+    
+    article {
+      padding: 15px;
+    }
 }
 
 @media(max-width:580px){
@@ -727,6 +782,14 @@ footer, .feedbackForm legend,
     font-size: 10px;
     padding: 4px;
     border-width: 1px;
+  }
+  
+  article {
+    padding: 10px;
+  }
+  
+  section {
+    margin: 15px 0;
   }
 }
 
