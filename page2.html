@@ -3,16 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Революция</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Революция - Основные события</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <!-- Подключаем Cleave.js для форматирования телефона -->
+    <script src="https://cdn.jsdelivr.net/npm/cleave.js@1.6.0/dist/cleave.min.js"></script>
 </head>
 
 <body class="darkThems">
     <header>
         <div class="containerHeader">
             <div class="name">
-                <img src="logo.png" alt="Логотип" style="width: 60px;height: 60px;">
-                <h1><a href="index.html">Революция 1917 года</a></h1>
+                <img src="../photo/logo.png" alt="Логотип" style="width: 60px;height: 60px;">
+                <h1><a href="../index.html">Революция 1917 года</a></h1>
             </div>
             <nav class="nav" id="nav">
                 <ul>
@@ -33,112 +35,122 @@
         </div>
     </header>
 
-    <div class="page">
-        <div class="container">
+    <main class="container">
+        <article>
             <h2>Основные события Революции 1917 года в России</h2>
-        </div>
-        <table>
-            <tr>
-                <th>Дата</th>
-                <th>Событие</th>
-                <th>Последствия/Значение</th>
-            </tr>
-            <tr>
-                <td>23 февраля (8 марта) 1917 г.</td>
-                <td>Женские демонстрации в Петрограде в честь Международного женского дня.</td>
-                <td>Начало массовых выступлений; вскоре к демонстрантам присоединились рабочие и солдаты.</td>
-            </tr>
-            <tr>
-                <td>27 февраля (12 марта) 1917 г.</td>
-                <td>Солдаты Московского полка отказались стрелять в демонстрантов.</td>
-                <td>Формирование Петроградского Совета рабочих и солдатских депутатов; крах полиции.</td>
-            </tr>
-            <tr>
-                <td>2 марта (15 марта) 1917 г.</td>
-                <td>Отречение Николая II от престола.</td>
-                <td>Конец Российской империи; власть перешла Временному правительству.</td>
-            </tr>
-            <tr>
-                <td>Март — апрель 1917 г.</td>
-                <td>Двоевластие: Временное правительство и Петроградский Совет.</td>
-                <td>Политическая нестабильность; разногласия по вопросам войны, земли и власти.</td>
-            </tr>
-            <tr>
-                <td>16 апреля (3 апреля) 1917 г.</td>
-                <td>Возвращение Ленина в Россию; «Апрельские тезисы».</td>
-                <td>Радикализация большевиков; лозунг «Вся власть Советам!».</td>
-            </tr>
-            <tr>
-                <td>18 июня (1 июля) 1917 г.</td>
-                <td>Наступление армии генерала Брусилова («июньское наступление»).</td>
-                <td>Провал операции → рост антивоенных настроений и поддержка большевиков.</td>
-            </tr>
-            <tr>
-                <td>3–5 июля (16–18 июля) 1917 г.</td>
-                <td>Июльские дни: вооружённые выступления большевиков.</td>
-                <td>Подавление выступлений; арест большевистских лидеров; временное ослабление партии.</td>
-            </tr>
-            <tr>
-                <td>25–26 октября (7–8 ноября) 1917 г.</td>
-                <td>Октябрьское вооружённое восстание в Петрограде.</td>
-                <td>Свержение Временного правительства; установление власти Советов.</td>
-            </tr>
-            <tr>
-                <td>26 октября (8 ноября) 1917 г.</td>
-                <td>II Всероссийский съезд Советов: Декрет о мире и Декрет о земле.</td>
-                <td>Обещание мира крестьянам и земли солдатам; начало большевистских реформ.</td>
-            </tr>
-            <tr>
-                <td>Ноябрь 1917 г. – январь 1918 г.</td>
-                <td>Распуск Учредительного собрания.</td>
-                <td>Окончательный отказ от буржуазно-демократического пути; укрепление диктатуры пролетариата.</td>
-            </tr>
-        </table>
-    </div>
+            
+            <section class="page">
+                <table>
+                    <tr>
+                        <th>Дата</th>
+                        <th>Событие</th>
+                        <th>Последствия/Значение</th>
+                    </tr>
+                    <tr>
+                        <td>23 февраля (8 марта) 1917 г.</td>
+                        <td>Женские демонстрации в Петрограде в честь Международного женского дня.</td>
+                        <td>Начало массовых выступлений; вскоре к демонстрантам присоединились рабочие и солдаты.</td>
+                    </tr>
+                    <tr>
+                        <td>27 февраля (12 марта) 1917 г.</td>
+                        <td>Солдаты Московского полка отказались стрелять в демонстрантов.</td>
+                        <td>Формирование Петроградского Совета рабочих и солдатских депутатов; крах полиции.</td>
+                    </tr>
+                    <tr>
+                        <td>2 марта (15 марта) 1917 г.</td>
+                        <td>Отречение Николая II от престола.</td>
+                        <td>Конец Российской империи; власть перешла Временному правительству.</td>
+                    </tr>
+                    <tr>
+                        <td>Март — апрель 1917 г.</td>
+                        <td>Двоевластие: Временное правительство и Петроградский Совет.</td>
+                        <td>Политическая нестабильность; разногласия по вопросам войны, земли и власти.</td>
+                    </tr>
+                    <tr>
+                        <td>16 апреля (3 апреля) 1917 г.</td>
+                        <td>Возвращение Ленина в Россию; «Апрельские тезисы».</td>
+                        <td>Радикализация большевиков; лозунг «Вся власть Советам!».</td>
+                    </tr>
+                    <tr>
+                        <td>18 июня (1 июля) 1917 г.</td>
+                        <td>Наступление армии генерала Брусилова («июньское наступление»).</td>
+                        <td>Провал операции → рост антивоенных настроений и поддержка большевиков.</td>
+                    </tr>
+                    <tr>
+                        <td>3–5 июля (16–18 июля) 1917 г.</td>
+                        <td>Июльские дни: вооружённые выступления большевиков.</td>
+                        <td>Подавление выступлений; арест большевистских лидеров; временное ослабление партии.</td>
+                    </tr>
+                    <tr>
+                        <td>25–26 октября (7–8 ноября) 1917 г.</td>
+                        <td>Октябрьское вооружённое восстание в Петрограде.</td>
+                        <td>Свержение Временного правительства; установление власти Советов.</td>
+                    </tr>
+                    <tr>
+                        <td>26 октября (8 ноября) 1917 г.</td>
+                        <td>II Всероссийский съезд Советов: Декрет о мире и Декрет о земле.</td>
+                        <td>Обещание мира крестьянам и земли солдатам; начало большевистских реформ.</td>
+                    </tr>
+                    <tr>
+                        <td>Ноябрь 1917 г. – январь 1918 г.</td>
+                        <td>Распуск Учредительного собрания.</td>
+                        <td>Окончательный отказ от буржуазно-демократического пути; укрепление диктатуры пролетариата.</td>
+                    </tr>
+                </table>
+            </section>
+        </article>
+    </main>
 
-    <form id="feedbackForm" class="feedbackForm">
-        <fieldset>
-            <legend>Форма обратной связи</legend>
-            
-            <label for="fname">Имя:*</label><br>
-            <input type="text" id="fname" name="fname" placeholder="Иван" required><br><br>
-            
-            <label for="lname">Фамилия:*</label><br>
-            <input type="text" id="lname" name="lname" placeholder="Иванов" required><br><br>
-            
-            <span>Пол:*</span><br>
-            <input type="radio" id="man" name="gender" value="male">
-            <label for="man">Мужской</label><br>
-            
-            <input type="radio" id="woman" name="gender" value="female">
-            <label for="woman">Женский</label><br>
-            
-            <input type="radio" id="other" name="gender" value="other">
-            <label for="other">Другой</label><br><br>
-            
-            <label for="comment">Ваш комментарий:*</label><br>
-            <textarea id="comment" name="comment" rows="5" cols="50" 
-                      placeholder="Оставьте ваш комментарий здесь..." 
-                      required></textarea><br><br>
-            
-            <input type="submit" value="Отправить">
-            <input type="reset" value="Очистить">
-            
-            <p style="font-size: 12px; margin-top: 10px; color: #888;">
-                * Поля, обязательные для заполнения
-            </p>
-        </fieldset>
-    </form>
+    <article class="feedbackForm">
+        <form id="feedbackForm" class="feedbackForm">
+            <fieldset>
+                <legend>Форма обратной связи</legend>
+                
+                <label for="fname">Имя:*</label>
+                <input type="text" id="fname" name="fname" placeholder="Иван" required>
+                
+                <label for="lname">Фамилия:*</label>
+                <input type="text" id="lname" name="lname" placeholder="Иванов" required>
+                
+                <label for="phone">Номер телефона:</label>
+                <input type="tel" id="phone" name="phone" placeholder="+7 123 456 78 90" class="cleave-input">
+                
+                <div class="gender-group">
+                    <span>Пол:*</span>
+                    <div class="radio-group">
+                        <input type="radio" id="man" name="gender" value="male">
+                        <label for="man">Мужской</label>
+                        
+                        <input type="radio" id="woman" name="gender" value="female">
+                        <label for="woman">Женский</label>
+                        
+                        <input type="radio" id="other" name="gender" value="other">
+                        <label for="other">Другой</label>
+                    </div>
+                </div>
+                
+                <label for="comment">Ваш комментарий:*</label>
+                <textarea id="comment" name="comment" rows="5" placeholder="Оставьте ваш комментарий здесь..." required></textarea>
+                
+                <div class="form-buttons">
+                    <input type="submit" value="Отправить">
+                    <input type="reset" value="Очистить">
+                </div>
+                
+                <p class="form-note">
+                    * Поля, обязательные для заполнения
+                </p>
+            </fieldset>
+        </form>
+    </article>
 
     <footer>
         <div class="containerFooter">
-            <a href="https://t.me/studirit"><img src="tg.png" alt="Telegram"></a>
+            <a href="https://t.me/studirit"><img src="../photo/tg.png" alt="Telegram"></a>
             <p>25-ИСТ-2 Кротов И. А.</p>
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="../script/script.js"></script>
 </body>
-
 </html>
-
