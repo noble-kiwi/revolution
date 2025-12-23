@@ -70,6 +70,43 @@ function initMenuCloseOnClickOutside() {
   });
 }
 
+function initPhoneInput() {
+  const phoneInput = document.getElementById('phone');
+  
+  if (phoneInput && typeof Cleave !== 'undefined') {
+    const cleave = new Cleave(phoneInput, {
+      phone: true,
+      phoneRegionCode: 'RU',
+      prefix: '+7',
+      noImmediatePrefix: true,
+      delimiter: ' ',
+      blocks: [2, 3, 3, 2, 2],
+      onValueChanged: function(e) {
+        const errorMessage = phoneInput.parentNode.querySelector('.error-message');
+        if (errorMessage) {
+          errorMessage.remove();
+        }
+        phoneInput.style.borderColor = '';
+        phoneInput.style.borderWidth = '';
+      }
+    });
+    
+    phoneInput.addEventListener('blur', function() {
+      const value = this.value.replace(/\D/g, '');
+      if (value && value.length > 0 && value.length < 11) {
+        showError(this, 'Номер телефона должен содержать 11 цифр');
+      }
+    });
+    
+    const form = document.getElementById('feedbackForm');
+    if (form) {
+      form.addEventListener('reset', function() {
+        phoneInput.value = '';
+      });
+    }
+  }
+}
+
 function validateForm() {
   let isValid = true;
   
@@ -89,6 +126,15 @@ function validateForm() {
   } else if (lastName.value.trim().length < 3) {
     showError(lastName, 'Фамилия должна содержать не менее 3 символов');
     isValid = false;
+  }
+  
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput && phoneInput.value.trim()) {
+    const phoneValue = phoneInput.value.replace(/\D/g, '');
+    if (phoneValue.length < 11) {
+      showError(phoneInput, 'Номер телефона должен содержать 11 цифр');
+      isValid = false;
+    }
   }
   
   const genderInputs = document.querySelectorAll('input[name="gender"]');
@@ -160,6 +206,7 @@ function submitForm() {
   const formData = {
     firstName: document.getElementById('fname').value.trim(),
     lastName: document.getElementById('lname').value.trim(),
+    phone: document.getElementById('phone') ? document.getElementById('phone').value.trim() : '',
     gender: document.querySelector('input[name="gender"]:checked').value,
     comment: document.getElementById('comment').value.trim(),
     timestamp: new Date().toISOString()
@@ -187,6 +234,11 @@ function submitForm() {
   
   form.reset();
   
+  const phoneInput = document.getElementById('phone');
+  if (phoneInput) {
+    phoneInput.value = '';
+  }
+  
   setTimeout(() => {
     successMessage.remove();
   }, 5000);
@@ -207,6 +259,18 @@ function initFeedbackForm() {
       if (isValid) {
         submitForm();
       }
+    });
+    
+    const inputs = feedbackForm.querySelectorAll('input, textarea');
+    inputs.forEach(input => {
+      input.addEventListener('input', function() {
+        const errorMessage = this.parentNode.querySelector('.error-message');
+        if (errorMessage) {
+          errorMessage.remove();
+        }
+        this.style.borderColor = '';
+        this.style.borderWidth = '';
+      });
     });
   }
 }
@@ -269,6 +333,19 @@ function initAll() {
   initMenuCloseOnClickOutside();
   initFeedbackForm();
   initMedia();
+  
+  if (typeof Cleave !== 'undefined') {
+    initPhoneInput();
+  } else {
+    const checkCleave = setInterval(() => {
+      if (typeof Cleave !== 'undefined') {
+        initPhoneInput();
+        clearInterval(checkCleave);
+      }
+    }, 100);
+    
+    setTimeout(() => clearInterval(checkCleave), 5000);
+  }
 }
 
 document.addEventListener('DOMContentLoaded', initAll);
