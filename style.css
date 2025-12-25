@@ -1,10 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
-:root {
-  --bg-color: #ffffff;
-  --text-color: #000000;
-}
-
 .darkThems {
   --bg-color: #121212;
   --text-color: #ffffff;
@@ -129,16 +124,16 @@ a{
 }
 
 .containerHeader{
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0 15px;
-    box-sizing: border-box;
-    width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 15px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 header{
@@ -167,11 +162,11 @@ header nav{
 
 header nav ul{
   list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
-    flex-direction: row;
-    gap: 30px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-direction: row;
+  gap: 30px;
 }
 
 header nav ul li{
@@ -195,37 +190,37 @@ header nav ul li a{
 }
 
 .container{
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-evenly;
-    align-items: center;
-    padding: 15px;
-    box-sizing: border-box;
-    width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 15px;
+  box-sizing: border-box;
+  width: 100%;
 }
 
 .banner_text{
-    font-weight: 400;
-    font-size: 20px;
-    text-align: justify;
-    width: 100%;
+  font-weight: 400;
+  font-size: 20px;
+  text-align: justify;
+  width: 100%;
 }
 
 .banner_text p {
-    text-align: justify;
-    margin: 15px 0;
+  text-align: justify;
+  margin: 15px 0;
 }
 
 .heading{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 100%;
-    text-align: center;
-    margin: 25px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+  margin: 25px 0;
 }
 
 .heading img {
@@ -236,17 +231,17 @@ header nav ul li a{
 }
 
 .container_banner{
-    width: 100%;
-    max-width: 1400px;
-    margin: auto;
-    display: flex;
-    flex-wrap: wrap;
-    align-content: center;
-    justify-content: space-between;
-    align-items: center;
-    margin-top: 50px;
-    padding: 0 15px;
-    box-sizing: border-box;
+  width: 100%;
+  max-width: 1400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+  padding: 0 15px;
+  box-sizing: border-box;
 }
 
 .container_banner h2{
@@ -263,22 +258,22 @@ header nav ul li a{
 }
 
 .text{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .banner1{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .banner2{
-    width: 50%;
-    display: flex;
-    justify-content: space-around;
+  width: 50%;
+  display: flex;
+  justify-content: space-around;
 }
 
 .container_banner img{
@@ -513,16 +508,6 @@ flex-wrap: wrap;
 justify-content: center;
 }
 
-.media-btn {
-padding: 8px;
-border: none;
-border-radius: 4px;
-background: #3589FF;
-color: white;
-cursor: pointer;
-font-size: 16px;
-}
-
 .time-display {
 display: none;
 }
@@ -610,12 +595,6 @@ section h3 {
   margin: 0 auto;
 }
 
-.media video, .media audio {
-  margin-top: 15px;
-  width: 100%;
-  max-width: 800px;
-}
-
 .media img {
   max-width: 100%;
   height: auto;
@@ -669,12 +648,6 @@ main.container {
   text-align: center;
   margin: 20px 0 30px 0;
   width: 100%;
-}
-
-.media-btn:hover {
-  background-color: #2c7be5;
-  transform: translateY(-1px);
-  transition: all 0.2s ease;
 }
 
 @media (max-width:1024px) {
@@ -947,11 +920,6 @@ main.container {
     display: flex;
     padding: 1px;
     gap: 5px;
-  }
-
-  .media-btn{
-    padding: 6px 8px;
-    font-size: 14px;
   }
 
   audio{
