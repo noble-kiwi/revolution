@@ -80,7 +80,6 @@ function initPhoneInput() {
       prefix: '+7',
       noImmediatePrefix: true,
       delimiter: ' ',
-      blocks: [2, 3, 3, 2, 2],
       onValueChanged: function(e) {
         const errorMessage = phoneInput.parentNode.querySelector('.error-message');
         if (errorMessage) {
@@ -349,3 +348,4 @@ function initAll() {
 }
 
 document.addEventListener('DOMContentLoaded', initAll);
+
